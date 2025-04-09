@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "BazaUczniow/1.0.0": {
+        "runtime": {
+          "BazaUczniow.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BazaUczniow/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
