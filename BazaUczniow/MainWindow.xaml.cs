@@ -50,11 +50,39 @@ namespace BazaUczniow
         {
             InitializeComponent();
         }
+        private void wczytaj_Click(object sender, RoutedEventArgs e)
+        {
 
-        private void przycisk_Click(object sender, RoutedEventArgs e)
+        }
+        private void zapisz_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void dodaj_Click(object sender, RoutedEventArgs e)
         {
             var okno = new Window1();
             okno.ShowDialog();
+
+            string pesel = okno.PESEL_Window1;
+            string imie = okno.Imie_Window1;
+            string imie2 = okno.Imie2_Window1;
+            string nazwisko = okno.Nazwisko_Window1;
+            string data_urodzenia = okno.DataUrodzenia_Window1;
+            string nr_telefonu = okno.NumerTelefonu_Window1;
+            string adres = okno.Adres_Window1;
+            string miejscowosc = okno.Miejscowosc_Window1;
+            string kod_pocztowy = okno.KodPocztowy_Window1;
+
+            var uczen = new Uczen();
+            uczen.Przypisz(pesel, imie, imie2, nazwisko, data_urodzenia, nr_telefonu, adres, miejscowosc, kod_pocztowy);
+            listview.Items.Add(uczen);
+    }
+        private void usun_Click(object sender, RoutedEventArgs e)
+        {
+            while (listview.SelectedItems.Count > 0)
+            {
+                listview.Items.Remove(listview.SelectedItems[0]);
+            }
         }
     }
 }
